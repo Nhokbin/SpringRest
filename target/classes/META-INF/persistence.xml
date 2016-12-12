@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+	<persistence-unit name="SpringRest" transaction-type="RESOURCE_LOCAL">
+	   
+	     <properties>
+            <property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/restful"/>
+            <property name="openjpa.ConnectionDriverName" value="org.postgresql.Driver"/>
+            <property name="javax.persistence.jdbc.user" value="postgres"/>
+            <property name="javax.persistence.jdbc.password" value="nhokbinkho"/>
+            <!-- to auto create table -->
+            <property name="hibernate.hbm2ddl.auto" value="update"/>
+    
+    		<property name="openjpa.Log" value="SQL=TRACE"/>
+        </properties>
+	</persistence-unit>
+</persistence>
